@@ -188,12 +188,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="grid grid-cols-1 max-w-96 mx-auto sm:max-w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {BooksArr.map((book) => (
+              {BooksArr.map((book, index) => (
                 <Book img={book.cover}
                   name={book.title}
                   category={book.category}
                   description={book.description}
                   url={book.url}
+                  key={index}
                 />
               ))}
             </div>
